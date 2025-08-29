@@ -1,0 +1,168 @@
+{
+  "projectName": "Modern Web Platform",
+  "version": "1.0.0",
+  "designSystem": {
+    "colors": {
+      "primary": {
+        "50": "#f0f9ff",
+        "500": "#0ea5e9",
+        "900": "#0c4a6e"
+      },
+      "secondary": {
+        "50": "#fdf4ff",
+        "500": "#d946ef",
+        "900": "#701a75"
+      },
+      "accent": {
+        "50": "#fefce8",
+        "500": "#eab308",
+        "900": "#713f12"
+      },
+      "neutral": {
+        "50": "#fafafa",
+        "100": "#f4f4f5",
+        "200": "#e4e4e7",
+        "300": "#d4d4d8",
+        "400": "#a1a1aa",
+        "500": "#71717a",
+        "600": "#52525b",
+        "700": "#3f3f46",
+        "800": "#27272a",
+        "900": "#18181b"
+      }
+    },
+    "typography": {
+      "fontFamilies": {
+        "sans": "Inter, system-ui, sans-serif",
+        "display": "Poppins, system-ui, sans-serif"
+      },
+      "sizes": {
+        "xs": "0.75rem",
+        "sm": "0.875rem",
+        "base": "1rem",
+        "lg": "1.125rem",
+        "xl": "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.875rem",
+        "4xl": "2.25rem",
+        "5xl": "3rem",
+        "6xl": "3.75rem"
+      }
+    },
+    "spacing": {
+      "unit": "0.25rem",
+      "scale": [0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64]
+    },
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    },
+    "components": {
+      "Button": {
+        "variants": ["primary", "secondary", "outline", "ghost"],
+        "sizes": ["sm", "md", "lg"]
+      },
+      "Card": {
+        "variants": ["default", "elevated", "bordered"],
+        "props": {
+          "padding": "spacing",
+          "borderRadius": "rounded"
+        }
+      },
+      "Navbar": {
+        "height": "64px",
+        "sticky": true,
+        "transparentOnScroll": false
+      },
+      "Footer": {
+        "layout": "multi-column",
+        "hasNewsletter": true
+      },
+      "TestimonialCarousel": {
+        "autoPlay": true,
+        "interval": 5000,
+        "showIndicators": true,
+        "showArrows": true
+      }
+    }
+  },
+  "agents": {
+    "UI/UX Designer": {
+      "role": "Design wireframes and high-fidelity mockups",
+      "responsibilities": [
+        "Create responsive designs for all breakpoints",
+        "Ensure accessibility standards (WCAG 2.1 AA)",
+        "Maintain design consistency across pages",
+        "Design interactive elements and animations"
+      ],
+      "tools": ["Figma API", "Design System Components"]
+    },
+    "Frontend Developer": {
+      "role": "Implement designs using React/Next.js",
+      "responsibilities": [
+        "Build responsive components",
+        "Implement animations and interactions",
+        "Optimize performance and SEO",
+        "Ensure cross-browser compatibility"
+      ],
+      "tools": ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+    },
+    "Backend Developer": {
+      "role": "Create data models and API integrations",
+      "responsibilities": [
+        "Design data schemas",
+        "Implement API endpoints",
+        "Handle data fetching and caching",
+        "Manage state management"
+      ],
+      "tools": ["Node.js", "Prisma", "REST API"]
+    },
+    "QA & Visual Reviewer": {
+      "role": "Test and validate implementations",
+      "responsibilities": [
+        "Run visual regression tests",
+        "Perform accessibility audits",
+        "Test responsive behavior",
+        "Validate against design specs"
+      ],
+      "tools": ["Playwright", "Lighthouse", "axe-core"]
+    }
+  },
+  "workflow": {
+    "phases": [
+      {
+        "name": "Design",
+        "agent": "UI/UX Designer",
+        "outputs": ["Wireframes", "High-fidelity mockups", "Design specifications"]
+      },
+      {
+        "name": "Implementation",
+        "agent": "Frontend Developer",
+        "outputs": ["React components", "Styled pages", "Interactive features"]
+      },
+      {
+        "name": "Integration",
+        "agent": "Backend Developer",
+        "outputs": ["Data models", "API endpoints", "Dynamic content"]
+      },
+      {
+        "name": "Quality Assurance",
+        "agent": "QA & Visual Reviewer",
+        "outputs": ["Test reports", "Accessibility audit", "Performance metrics"]
+      }
+    ]
+  },
+  "mcpServers": {
+    "context7": {
+      "purpose": "Data management and context handling",
+      "usage": "Store and retrieve testimonial data"
+    },
+    "playwright": {
+      "purpose": "Visual testing and browser automation",
+      "usage": "Run visual regression tests"
+    }
+  }
+}
